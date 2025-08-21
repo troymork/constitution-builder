@@ -3,10 +3,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const steps = [
-  {href:"/constitution-builder/builder", label:"Preamble"},
-  {href:"/constitution-builder/builder/rights", label:"Rights"},
-  {href:"/constitution-builder/builder/governance", label:"Governance"},
-  {href:"/constitution-builder/builder/review", label:"Review & Export"},
+  {href:"/builder", label:"Preamble"},
+  {href:"/builder/rights", label:"Rights"},
+  {href:"/builder/governance", label:"Governance"},
+  {href:"/builder/review", label:"Review & Export"},
 ];
 
 export default function StepNav(){

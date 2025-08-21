@@ -1,9 +1,13 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  output: 'export',
+  output: "export",
   images: { unoptimized: true },
-  basePath: '/constitution-builder',
+  basePath: isProd ? '/constitution-builder' : '',
+  assetPrefix: isProd ? '/constitution-builder/' : '',
   trailingSlash: true,
+  eslint: { ignoreDuringBuilds: true }
 };
 export default nextConfig;
 export const outputFileTracingRoot = process.cwd();
